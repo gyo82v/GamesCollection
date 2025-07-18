@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Set box sizing for everything */
+  * {
+    box-sizing: border-box;
+  }
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Apply custom styles to html, body, and the root element */
+  html, body, #root {
+    @apply min-h-screen m-0 p-0 bg-orange-50;
+    line-height: 1.5;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    /* Hide scrollbar (Firefox and IE) */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  /* Hide scrollbar for WebKit */
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Ensure images and buttons behave as expected */
+  img {
+    @apply max-w-full h-auto;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+
+
+@layer utilities {
+  .protest-revolution-regular {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .underdog-regular {
+    font-family: "Underdog", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .lavishly-yours-regular {
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .rouge-script-regular {
+    font-family: "Rouge Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .marck-script-regular {
+    font-family: "Marck Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.kablammo-special {
+  font-family: "Kablammo", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 0;
+}
+.hanalei-regular {
+  font-family: "Hanalei", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.rubik-puddles-regular {
+  font-family: "Rubik Puddles", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.unifrakturmaguntia-regular {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.lacquer-regular {
+  font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Custom CSS for the custom Roman numeral list */
+.roman-list {
+  list-style: none; /* Remove the browser default */
+  counter-reset: roman; /* Initialize the counter */
+}
+
+.roman-list li {
+  display: flex;         /* Use flex layout for alignment */
+  align-items: center;   /* Vertically center the numeral and text */
+}
+
+/* Style the pseudo-element that displays the Roman numeral */
+.roman-list li::before {
+  counter-increment: roman; /* Increment counter */
+  content: counter(roman, upper-roman); /* Convert counter to upper-roman */
+  display: inline-block;    /* So we can assign a width */
+  width: 3rem;              /* Fixed width for the numeral block */
+  text-align: left;        /* Right align the numeral within the block */
+  margin-right: 0.5rem;     /* Spacing between the numeral and the text */
+  text-shadow: 1px 1px 2px  rgba(0, 0, 0, 0.4);
+}
+
+.shadow-all {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.bg-radial-purple {
+    background-image: radial-gradient(circle at center, 
+      theme('colors.purple.700') 0%, 
+      theme('colors.purple.400') 100%
+    );
+}
+.bg-radial-green {
+    background-image: radial-gradient(circle at center, 
+      theme('colors.green.700') 0%, 
+      theme('colors.green.400') 100%
+    );
+}
+.bg-radial-red {
+    background-image: radial-gradient(circle at center, 
+      theme('colors.red.700') 0%, 
+      theme('colors.red.300') 100%
+    );
+}
+.bg-radial-yellow {
+    background-image: radial-gradient(circle at center, 
+      theme('colors.yellow.500') 0%, 
+      theme('colors.yellow.200') 100%
+    );
+}
+.bg-radial-sky {
+    background-image: radial-gradient(circle at center, 
+      theme('colors.sky.400') 0%, 
+      theme('colors.sky.200') 100%
+    );
+}
+.bg-radial-orange {
+    background-image: radial-gradient(circle at center, 
+      theme('colors.orange.600') 0%, 
+      theme('colors.orange.300') 100%
+    );
+}
+.bg-radial-indigo {
+    background-image: radial-gradient(circle at center, 
+      theme('colors.indigo.600') 0%, 
+      theme('colors.indigo.300') 100%
+    );
+}
+.bg-radial-fuchsia {
+    background-image: radial-gradient(circle at center, 
+      theme('colors.fuchsia.400') 0%, 
+      theme('colors.fuchsia.200') 100%
+    );
+}
+.bg-radial-lime {
+    background-image: radial-gradient(circle at center, 
+      theme('colors.lime.500') 0%, 
+      theme('colors.lime.200') 100%
+    );
+}
+
+
+
+}
+
+
+
+
